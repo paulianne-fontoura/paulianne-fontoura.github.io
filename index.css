@@ -36,7 +36,7 @@
     
     --black: #000;
     --pink: #9f00f5;
-    --violet: #b7ffe7;
+    --ciano: #b7ffe7;
     --white: #f0e9f2;
     --white-1: #aeaefcda;
 
@@ -139,7 +139,7 @@ h3 {
     font-family: 'Jost', sans-serif;
     font-weight: 300;
     line-height: var(--line-height-normal);
-    color: var(--pink);
+    color: var(--ciano);
 }
 
 
