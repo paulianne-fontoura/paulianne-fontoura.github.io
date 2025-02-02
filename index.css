@@ -515,7 +515,7 @@ body:not(.user-is-tabbing) a:focus {
     filter: invert(100%) grayscale(100%) opacity(.8);
 }
 
-.tools_logo {
+.tools__logo {
     height: 6.5rem;
     max-width: 18rem;
 }
