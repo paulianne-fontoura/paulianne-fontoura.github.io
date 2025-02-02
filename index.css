@@ -130,7 +130,7 @@ h3 {
 
 .heading-primary {
     line-height: 1;
-    font-size: var(--font-size-huge);
+    font-size: var(--font-size-large);
     font-weight: 300;
 }
 
