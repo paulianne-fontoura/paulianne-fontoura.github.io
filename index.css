@@ -428,7 +428,7 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(max-width: 500px) {
     .header {
-        text-align: center;
+        text-align: left;
     }
 
     .header__text p {
@@ -506,27 +506,27 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Clients ----- */
+/* ----- Tools ----- */
 /* --------------------------------------- */
 
-.client__logos {
+.tools__logos {
     display: flex;
     justify-content: space-between;
     filter: invert(100%) grayscale(100%) opacity(.8);
 }
 
-.client__logo {
+.tools_logo {
     height: 6.5rem;
     max-width: 18rem;
 }
 
 @media(max-width: 1240px) {
-    .client__logos {
+    .tools__logos {
         overflow-x: scroll;
         padding: var(--gutter-normal);
     }
 
-    .client__logo:not(:last-of-type) {
+    .tools__logo:not(:last-of-type) {
         margin-right: var(--gutter-medium);
     }
 }
