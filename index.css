@@ -33,6 +33,7 @@
 
     --line-height-normal: 1.7;
     --line-height-small: 1.2;
+    --line-height-smaller: 1.0;
     
     --black: #000;
     --pink: #9f00f5;
@@ -138,7 +139,7 @@ h3 {
 .heading-secondary {
     font-family: 'Jost', sans-serif;
     font-weight: 300;
-    line-height: var(--line-height-small);
+    line-height: var(--line-height-smaller);
     color: var(--ciano);
 }
 
