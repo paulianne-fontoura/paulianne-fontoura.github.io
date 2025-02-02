@@ -33,7 +33,9 @@
 
     --line-height-normal: 1.7;
     --line-height-small: 1.2;
-
+    
+/* modificar o padrão do 'pink' mudará as cores dos botões e highlights
+    
     --black: #000;
     --pink: #3c22a2;
     --white: #f0e9f2;
