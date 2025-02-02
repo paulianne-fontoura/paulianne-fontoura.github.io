@@ -410,6 +410,7 @@ body:not(.user-is-tabbing) a:focus {
     background-size: contain;
     background-position: center;
     background-attachment: fixed;
+    transform: scale(1.1);
     font-size: var(--font-size-normal);
 }
 
