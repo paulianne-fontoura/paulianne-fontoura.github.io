@@ -143,6 +143,21 @@ h3 {
     color: var(--ciano);
 }
 
+.slider-text-primary {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: var(--line-height-smaller);
+    color: var(--ciano);
+}
+
+.slider-text-secondary {
+    font-family: 'Jost', sans-serif;
+    font-weight: 150;
+    line-height: var(--line-height-smaller);
+    color: #f0e9f2;
+}
+
+
 
 @media(max-width: 900px) {
     .heading-primary {
