@@ -734,7 +734,7 @@ body:not(.user-is-tabbing) a:focus {
    width: 10px;
    height: 10px;
    border-radius:100%;
-   background: #ccc;
+   background: var(--pink);
    margin: 0 10px;
 }
 #slide1:checked ~ #bullets label:nth-child(1),
