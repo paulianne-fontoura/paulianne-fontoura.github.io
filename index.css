@@ -629,7 +629,6 @@ body:not(.user-is-tabbing) a:focus {
 #slider {
    margin: 0 auto;
    width: 1200px;
-   height: 800px;
    max-width: 100%;
    text-align: center;
 }
@@ -663,17 +662,11 @@ body:not(.user-is-tabbing) a:focus {
 #slide4:checked ~ #slides .inner {
    margin-left: -300%;
 }
-#slide4:checked ~ #slides .inner {
+#slide5:checked ~ #slides .inner {
     margin-left: -400%;
 }
-#slide5:checked ~ #slides .inner {
-    margin-left: -500%;
-}
 #slide6:checked ~ #slides .inner {
-    margin-left: -600%;
-}
-#slide7:checked ~ #slides .inner {
-    margin-left: -700%;
+    margin-left: -500%;
 }
    
 #slides .inner {
@@ -721,7 +714,7 @@ body:not(.user-is-tabbing) a:focus {
    display: #fff;
    width: 50px;
    height: 50px;
-   opacity: .4;
+   opacity: .6;
 }
 #controls label:hover {
    opacity: 1;
