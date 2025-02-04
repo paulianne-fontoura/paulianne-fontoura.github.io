@@ -641,7 +641,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 #slides {
    padding: 10px;
-   border: 1px solid var(--pink);
+   border: 1px solid var(--ciano);
    background: none;
    position: relative;
    z-index: 1;
