@@ -143,6 +143,22 @@ h3 {
     color: var(--ciano);
 }
 
+.heading-slider {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    line-height: var(--line-height-small);
+    color: var(--ciano);
+}
+
+
+.subtitle {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: var(--line-height-small);
+    color: var(--ciano);
+}
+
+
 .slider-text-primary {
     font-family: 'Jost', sans-serif;
     font-weight: 300;
