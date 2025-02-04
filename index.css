@@ -629,7 +629,7 @@ body:not(.user-is-tabbing) a:focus {
 #slider {
    margin: 0 auto;
    width: 1200px;
-   height: 600px;
+   height: 800px;
    max-width: 100%;
    text-align: center;
 }
@@ -642,7 +642,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 #slides {
    padding: 0px;
-   border: 1px solid var(--ciano);
+   border: 1px solid var(--pink);
    background: none;
    position: relative;
    z-index: 1;
@@ -710,7 +710,10 @@ body:not(.user-is-tabbing) a:focus {
 #slide1:checked ~ #controls label:nth-child(2),
 #slide2:checked ~ #controls label:nth-child(3),
 #slide3:checked ~ #controls label:nth-child(4),
-#slide4:checked ~ #controls label:nth-child(1) {
+#slide4:checked ~ #controls label:nth-child(5),
+#slide5:checked ~ #controls label:nth-child(6),
+#slide6:checked ~ #controls label:nth-child(7)
+#slide7:checked ~ #controls label:nth-child(1) {
    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
    float:right;
    margin: 0 -50px 0 0;
@@ -719,7 +722,10 @@ body:not(.user-is-tabbing) a:focus {
 #slide1:checked ~ #controls label:nth-last-child(2),
 #slide2:checked ~ #controls label:nth-last-child(3),
 #slide3:checked ~ #controls label:nth-last-child(4),
-#slide4:checked ~ #controls label:nth-last-child(1) {
+#slide4:checked ~ #controls label:nth-last-child(5),
+#slide5:checked ~ #controls label:nth-last-child(6),
+#slide6:checked ~ #controls label:nth-last-child(7),
+#slide7:checked ~ #controls label:nth-last-child(1) {
    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
    float:left;
    margin: 0 0 0 -50px;
@@ -734,24 +740,33 @@ body:not(.user-is-tabbing) a:focus {
    width: 10px;
    height: 10px;
    border-radius:100%;
-   background: var(--pink);
+   background: var(--ciano);
    margin: 0 10px;
 }
 #slide1:checked ~ #bullets label:nth-child(1),
 #slide2:checked ~ #bullets label:nth-child(2),
 #slide3:checked ~ #bullets label:nth-child(3),
-#slide4:checked ~ #bullets label:nth-child(4) {
+#slide4:checked ~ #bullets label:nth-child(4),
+#slide5:checked ~ #bullets label:nth-child(5),
+#slide6:checked ~ #bullets label:nth-child(6),
+#slide7:checked ~ #bullets label:nth-child(7), {
    background: #444;
 }
 @media screen and (max-width: 900px) {
    #slide1:checked ~ #controls label:nth-child(2),
    #slide2:checked ~ #controls label:nth-child(3),
    #slide3:checked ~ #controls label:nth-child(4),
-   #slide4:checked ~ #controls label:nth-child(1),
+   #slide4:checked ~ #controls label:nth-child(5),
+   #slide5:checked ~ #controls label:nth-child(6),
+   #slide6:checked ~ #controls label:nth-child(7),
+   #slide7:checked ~ #controls label:nth-child(1),
    #slide1:checked ~ #controls label:nth-last-child(2),
    #slide2:checked ~ #controls label:nth-last-child(3),
    #slide3:checked ~ #controls label:nth-last-child(4),
-   #slide4:checked ~ #controls label:nth-last-child(1) {
+   #slide4:checked ~ #controls label:nth-last-child(5)
+   #slide5:checked ~ #controls label:nth-last-child(6)
+   #slide6:checked ~ #controls label:nth-last-child(7)
+   #slide7:checked ~ #controls label:nth-last-child(1) {
       margin: 0;
    }
    #slides {
