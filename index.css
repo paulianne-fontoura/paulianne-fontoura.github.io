@@ -663,11 +663,23 @@ body:not(.user-is-tabbing) a:focus {
 #slide4:checked ~ #slides .inner {
    margin-left: -300%;
 }
+#slide4:checked ~ #slides .inner {
+    margin-left: -400%;
+}
+#slide5:checked ~ #slides .inner {
+    margin-left: -500%;
+}
+#slide6:checked ~ #slides .inner {
+    margin-left: -600%;
+}
+#slide7:checked ~ #slides .inner {
+    margin-left: -700%;
+}
+   
 #slides .inner {
    transition: margin-left 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
    width: 400%;
    line-height: 0;
-   height: 300px;
 }
 #slides .slide {
    width: 25%;
@@ -690,6 +702,15 @@ body:not(.user-is-tabbing) a:focus {
 #slides .slide_4 {
    background: #00A8E8;
 }
+#slides .slide_5 {
+    background: #00A8E8;
+}
+ #slides .slide_6 {
+    background: #00A8E8;
+}
+ #slides .slide_7 {
+    background: #00A8E8;
+}
 #controls {
    margin: -180px 0 0 0;
    width: 100%;
@@ -699,7 +720,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 #controls label {
    transition: opacity 0.2s ease-out;
-   display: none;
+   display: #fff;
    width: 50px;
    height: 50px;
    opacity: .4;
@@ -752,7 +773,7 @@ body:not(.user-is-tabbing) a:focus {
 #slide7:checked ~ #bullets label:nth-child(7), {
    background: #444;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
    #slide1:checked ~ #controls label:nth-child(2),
    #slide2:checked ~ #controls label:nth-child(3),
    #slide3:checked ~ #controls label:nth-child(4),
