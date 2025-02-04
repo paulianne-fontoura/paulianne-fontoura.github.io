@@ -708,9 +708,7 @@ body:not(.user-is-tabbing) a:focus {
  #slides .slide_6 {
     background: #00A8E8;
 }
- #slides .slide_7 {
-    background: #00A8E8;
-}
+
 #controls {
    margin: -180px 0 0 0;
    width: 100%;
@@ -733,8 +731,7 @@ body:not(.user-is-tabbing) a:focus {
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(5),
 #slide5:checked ~ #controls label:nth-child(6),
-#slide6:checked ~ #controls label:nth-child(7)
-#slide7:checked ~ #controls label:nth-child(1) {
+#slide6:checked ~ #controls label:nth-child(1) {
    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
    float:right;
    margin: 0 -50px 0 0;
@@ -745,8 +742,7 @@ body:not(.user-is-tabbing) a:focus {
 #slide3:checked ~ #controls label:nth-last-child(4),
 #slide4:checked ~ #controls label:nth-last-child(5),
 #slide5:checked ~ #controls label:nth-last-child(6),
-#slide6:checked ~ #controls label:nth-last-child(7),
-#slide7:checked ~ #controls label:nth-last-child(1) {
+#slide6:checked ~ #controls label:nth-last-child(1) {
    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
    float:left;
    margin: 0 0 0 -50px;
@@ -769,25 +765,22 @@ body:not(.user-is-tabbing) a:focus {
 #slide3:checked ~ #bullets label:nth-child(3),
 #slide4:checked ~ #bullets label:nth-child(4),
 #slide5:checked ~ #bullets label:nth-child(5),
-#slide6:checked ~ #bullets label:nth-child(6),
-#slide7:checked ~ #bullets label:nth-child(7), {
+#slide6:checked ~ #bullets label:nth-child(6) {
    background: #444;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
    #slide1:checked ~ #controls label:nth-child(2),
    #slide2:checked ~ #controls label:nth-child(3),
    #slide3:checked ~ #controls label:nth-child(4),
    #slide4:checked ~ #controls label:nth-child(5),
    #slide5:checked ~ #controls label:nth-child(6),
-   #slide6:checked ~ #controls label:nth-child(7),
-   #slide7:checked ~ #controls label:nth-child(1),
+   #slide6:checked ~ #controls label:nth-child(1),
    #slide1:checked ~ #controls label:nth-last-child(2),
    #slide2:checked ~ #controls label:nth-last-child(3),
    #slide3:checked ~ #controls label:nth-last-child(4),
-   #slide4:checked ~ #controls label:nth-last-child(5)
-   #slide5:checked ~ #controls label:nth-last-child(6)
-   #slide6:checked ~ #controls label:nth-last-child(7)
-   #slide7:checked ~ #controls label:nth-last-child(1) {
+   #slide4:checked ~ #controls label:nth-last-child(5),
+   #slide5:checked ~ #controls label:nth-last-child(6),
+   #slide6:checked ~ #controls label:nth-last-child(1) {
       margin: 0;
    }
    #slides {
