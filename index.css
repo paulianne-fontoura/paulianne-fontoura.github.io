@@ -628,7 +628,8 @@ body:not(.user-is-tabbing) a:focus {
 
 #slider {
    margin: 0 auto;
-   width: 1000px;
+   width: 1200px;
+   height: 600px;
    max-width: 100%;
    text-align: center;
 }
@@ -641,8 +642,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 #slides {
    padding: 0px;
-   border: 1px solid #ccc;
-   background: #fff;
+   border: 1px solid var(--ciano);
+   background: none;
    position: relative;
    z-index: 1;
 }
