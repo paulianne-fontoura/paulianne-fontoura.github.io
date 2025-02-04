@@ -146,7 +146,7 @@ h3 {
 .heading-slider {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    line-height: var(--line-height-small);
+    line-height: 26;
     color: var(--ciano);
 }
 
