@@ -676,7 +676,7 @@ body:not(.user-is-tabbing) a:focus {
    height: 300px;
 }
 #slides .slide {
-   width: 25%;
+   width: 16.66%;
    float:left;
    display: flex;
    justify-content: center;
