@@ -716,22 +716,22 @@ body:not(.user-is-tabbing) a:focus {
    color: #000;
 }
 #slides .slide_1 {
-   background-image: url("https://www.coriniumintelligence.com/hubfs/Imported_Blog_Media/BoIS-website-graphics-7-1-Nov-24-2022-03-48-30-6772-PM.png");
+   background-image: url("/images/back.png");
 }
 #slides .slide_2 {
-   background-image: url("https://www.coriniumintelligence.com/hubfs/Imported_Blog_Media/BoIS-website-graphics-7-1-Nov-24-2022-03-48-30-6772-PM.png");
+   background-image: url("/images/back.png");
 }
 #slides .slide_3 {
-   background-image: url("https://www.coriniumintelligence.com/hubfs/Imported_Blog_Media/BoIS-website-graphics-7-1-Nov-24-2022-03-48-30-6772-PM.png");
+   background-image: url("/images/back.png");
 }
 #slides .slide_4 {
-   background-image: url("https://www.coriniumintelligence.com/hubfs/Imported_Blog_Media/BoIS-website-graphics-7-1-Nov-24-2022-03-48-30-6772-PM.png");
+   background-image: url("/images/back.png");
 }
 #slides .slide_5 {
-    background-image: url("https://www.coriniumintelligence.com/hubfs/Imported_Blog_Media/BoIS-website-graphics-7-1-Nov-24-2022-03-48-30-6772-PM.png");
+    background-image: url("/images/back.png");
 }
  #slides .slide_6 {
-    background-image: url("https://www.coriniumintelligence.com/hubfs/Imported_Blog_Media/BoIS-website-graphics-7-1-Nov-24-2022-03-48-30-6772-PM.png");
+    background-image: url("/images/back.png");
 }
 
 #controls {
