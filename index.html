@@ -50,22 +50,24 @@
     <a class="hd__name" href="#haut">Paulianne Fontoura</a>
     <nav class="hd__nav" aria-label="Sections">
       <a href="#a-propos">À propos</a>
+      <a href="#competences">Compétences</a>
       <a href="#projets">Projets</a>
       <a href="#publications">Publications</a>
-      <a href="#competences">Compétences</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="haut">
-      <h1 class="hero__title">
-        <span class="hero__line"><span class="hero__word" data-fit>Paulianne</span></span>
-        <span class="hero__line"><span class="hero__word" data-fit>Fontoura</span></span>
-      </h1>
-      <div class="hero__meta">
-        <p class="hero__role">Data Analyst | Analytics Engineer</p>
-        <p class="hero__stack">SQL · Python · dbt · Power BI · BigQuery</p>
+      <div class="hero__main">
+        <h1 class="hero__title">
+          <span class="hero__line"><span class="hero__word">Paulianne</span></span>
+          <span class="hero__line"><span class="hero__word">Fontoura</span></span>
+        </h1>
+        <p class="hero__role"><span class="nw">Data Analyst <span class="pipe">|</span></span> <span class="nw">Analytics Engineer</span></p>
+      </div>
+      <div class="hero__meta tick">
+        <p class="hero__stack">SQL <span class="sep">·</span> Python <span class="sep">·</span> dbt <span class="sep">·</span> Power BI <span class="sep">·</span> BigQuery</p>
         <div class="hero__actions">
           <a class="btn btn--solid" href="mailto:pauliannefontoura.contact@gmail.com">M'écrire</a>
           <a class="btn" href="https://github.com/paulianne-fontoura" target="_blank" rel="noopener me">GitHub</a>
@@ -86,6 +88,31 @@
       </div>
     </section>
 
+    <section class="skills" id="competences">
+      <h2 class="sec-title" data-scramble>Compétences</h2>
+      <div class="skills__stage" aria-hidden="true"></div>
+      <div class="skills__grid">
+        <div class="skill reveal tick">
+          <h3 class="skill__title">Données</h3>
+          <ul class="skill__list">
+            <li>SQL</li><li>dbt</li><li>modélisation dimensionnelle</li><li>tests de données</li><li>réconciliation</li>
+          </ul>
+        </div>
+        <div class="skill reveal tick">
+          <h3 class="skill__title">Ingénierie</h3>
+          <ul class="skill__list">
+            <li>Python</li><li>Git</li><li>GitHub Actions</li><li>DuckDB</li><li>BigQuery</li>
+          </ul>
+        </div>
+        <div class="skill reveal tick">
+          <h3 class="skill__title">Restitution</h3>
+          <ul class="skill__list">
+            <li>Power BI</li><li>DAX</li><li>documentation technique</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="projects band" id="projets">
       <h2 class="sec-title" data-scramble>Projets</h2>
 
@@ -95,7 +122,7 @@
           <span class="tag">En cours</span>
         </div>
         <h3 class="project__title">Audit continu du registre des décès de l'Insee</h3>
-        <p class="stack">Python · DuckDB · pytest · GitHub Actions</p>
+        <p class="stack">Python <span class="sep">·</span> DuckDB <span class="sep">·</span> pytest <span class="sep">·</span> GitHub Actions</p>
         <p class="project__text">Le fichier des personnes décédées de l'Insee compte 29&nbsp;millions de lignes et change chaque mois&nbsp;- fichiers republiés, corrections silencieuses, doublons. Le pipeline télécharge, contrôle et charge chaque publication dans un entrepôt idempotent qui conserve tous les états du registre, sous tests automatisés et intégration continue. Les corrections du fichier deviennent mesurables au lieu de rester invisibles.</p>
       </article>
 
@@ -104,7 +131,7 @@
           <span class="project__num">02</span>
         </div>
         <h3 class="project__title">Mortalité territoriale à structure d'âge comparable</h3>
-        <p class="stack">Python · R · LaTeX · GitHub Actions</p>
+        <p class="stack">Python <span class="sep">·</span> R <span class="sep">·</span> LaTeX <span class="sep">·</span> GitHub Actions</p>
         <p class="project__text">Mesure des écarts de mortalité entre départements français à partir des données ouvertes du CépiDc-Inserm et de l'Insee, avec standardisation directe des taux sur l'âge. Une fois la structure d'âge neutralisée, le rapport entre départements extrêmes est de 2,2 et le classement change du tout au tout. ETL Python, analyse R contrôlée face aux taux publiés, note technique en PDF.</p>
         <a class="link" href="https://github.com/paulianne-fontoura/mortalite-territoriale-cepidc" target="_blank" rel="noopener">
           <span>Dépôt GitHub</span>
@@ -115,7 +142,7 @@
 
     <section class="pubs" id="publications">
       <h2 class="sec-title" data-scramble>Publications</h2>
-      <ul class="pubs__list">
+      <ul class="pubs__list tick">
         <li class="pub reveal">
           <h3 class="pub__title">Système d'aide à la décision en obstétrique aligné sur les recommandations de l'OMS</h3>
           <p class="pub__meta">première autrice, revue internationale à comité de lecture, 2025</p>
@@ -125,31 +152,6 @@
           <p class="pub__meta">co-autrice, Health Environments Research &amp; Design Journal, 2026</p>
         </li>
       </ul>
-    </section>
-
-    <section class="skills" id="competences">
-      <h2 class="sec-title" data-scramble>Compétences</h2>
-      <div class="skills__stage" aria-hidden="true"></div>
-      <div class="skills__grid">
-        <div class="skill reveal">
-          <h3 class="skill__title">Données</h3>
-          <ul class="skill__list">
-            <li>SQL</li><li>dbt</li><li>modélisation dimensionnelle</li><li>tests de données</li><li>réconciliation</li>
-          </ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="skill__title">Ingénierie</h3>
-          <ul class="skill__list">
-            <li>Python</li><li>Git</li><li>GitHub Actions</li><li>DuckDB</li><li>BigQuery</li>
-          </ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="skill__title">Restitution</h3>
-          <ul class="skill__list">
-            <li>Power BI</li><li>DAX</li><li>documentation technique</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
     <section class="contact" id="contact">
@@ -162,7 +164,7 @@
     </section>
   </main>
 
-  <footer class="ft">
+  <footer class="ft tick">
     <p>© 2026 Paulianne Fontoura</p>
   </footer>
 </body>

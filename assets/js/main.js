@@ -8,42 +8,26 @@ const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
 const els = {
   hero: $('#haut'),
-  title: $('.hero__title'),
-  words: $$('.hero__word'),
   about: $('#a-propos'),
   pin: $('.about__pin'),
   paras: $$('.about__p'),
   track: $('.about__track'),
+  skills: $('#competences'),
+  stage: $('.skills__stage'),
   projets: $('#projets'),
   pubs: $('#publications'),
   pubsList: $('.pubs__list'),
-  skills: $('#competences'),
-  stage: $('.skills__stage'),
   contact: $('#contact'),
   mail: $('.contact__mail'),
   back: $('#scene-back'),
   front: $('#scene-front'),
   nav: $$('.hd__nav a'),
 };
+const SECTIONS = ['a-propos', 'competences', 'projets', 'publications', 'contact'];
 
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 const mix = (a, b, t) => a + (b - a) * t;
 const ease = (t) => t * t * (3 - 2 * t);
-
-/* ------------------------------------------------------------------ */
-/* Nom du hero ajusté à la largeur disponible                          */
-/* ------------------------------------------------------------------ */
-function fitHero() {
-  const t = els.title;
-  t.style.fontSize = '100px';
-  const avail = t.clientWidth;
-  const widest = Math.max(...els.words.map((w) => w.offsetWidth));
-  if (!widest) return;
-  let size = (100 * avail) / widest;
-  const room = Math.max(innerHeight - 250, 160);
-  size = Math.min(size, room / 1.7);
-  t.style.fontSize = `${Math.floor(size * 100) / 100}px`;
-}
 
 /* ------------------------------------------------------------------ */
 /* Titres de section révélés par décodage                              */
@@ -202,7 +186,6 @@ function docTop(el) {
 }
 
 function layout() {
-  fitHero();
   const vh = innerHeight;
   state.pinned = getComputedStyle(els.pin).position === 'sticky';
   state.aboutTop = docTop(els.about);
@@ -216,14 +199,15 @@ function layout() {
     [k1, k2, k3] = els.paras.map((p) => docTop(p) - vh * 0.55);
   }
   state.k3 = k3;
+  // une étape par section, dans l'ordre de la page. anchor remplace l'ancrage par défaut
   const keys = [
     { s: 0, f: F.SOURCES },
     { s: k1, f: F.BLOCK },
     { s: k2, f: F.PIPELINE },
     { s: k3, f: F.RECONCILE },
+    { s: docTop(els.skills) - vh * 0.05, f: F.TRIO },
     { s: docTop(els.projets) + vh * 0.1, f: F.LAYERS },
     { s: docTop(els.pubs) - vh * 0.05, f: F.WAVE },
-    { s: docTop(els.skills) - vh * 0.05, f: F.TRIO },
     { s: docTop(els.contact) - vh * 0.3, f: F.LINE },
   ];
   for (let i = 1; i < keys.length; i++) keys[i].s = Math.max(keys[i].s, keys[i - 1].s + 1);
@@ -240,26 +224,27 @@ function layout() {
   }
 }
 
+// Étape de départ, étape d'arrivée et avancement de la transition
 function timeline(s) {
   const k = state.keys;
-  if (s <= k[0].s) return { from: k[0].f, to: k[0].f, t: 0 };
+  if (s <= k[0].s) return { a: k[0], b: k[0], t: 0 };
   for (let i = 0; i < k.length - 1; i++) {
     const a = k[i];
     const b = k[i + 1];
     if (s < b.s) {
       const h = a.s + (b.s - a.s) * HOLD;
       const t = s <= h ? 0 : (s - h) / (b.s - h);
-      return { from: a.f, to: b.f, t };
+      return { a, b, t };
     }
   }
   const last = k[k.length - 1];
-  return { from: last.f, to: last.f, t: 0 };
+  return { a: last, b: last, t: 0 };
 }
 
-// Position verticale de la formation, fixe ou accrochée à un élément de la page
-function anchorY(f, narrow) {
-  const a = PLACE[f].anchor;
-  if (!a) return narrow ? 0 : PLACE[f].y;
+// Position verticale d'une étape, fixe ou accrochée à un élément de la page
+function anchorY(key, narrow) {
+  const a = key.anchor || PLACE[key.f].anchor;
+  if (!a) return narrow ? 0 : PLACE[key.f].y;
   let cy;
   if (a === 'stage') {
     const r = els.stage.getBoundingClientRect();
@@ -294,7 +279,7 @@ function updateNav() {
   updateHeader();
   const probe = scrollY + innerHeight * 0.4;
   let current = null;
-  for (const id of ['a-propos', 'projets', 'publications', 'competences', 'contact']) {
+  for (const id of SECTIONS) {
     const el = document.getElementById(id);
     if (docTop(el) <= probe) current = id;
   }
@@ -324,11 +309,15 @@ function frame(now) {
   }
 
   const tl = timeline(sm);
+  const from = tl.a.f;
+  const to = tl.b.f;
+  const pa = PLACE[from];
+  const pb = PLACE[to];
   let t = tl.t;
   if (reduce) t = t < 0.5 ? 0 : 1;
   const e = ease(t);
-  const ca = CAM[tl.from];
-  const cb = CAM[tl.to];
+  const ca = CAM[from];
+  const cb = CAM[to];
   const aspect = state.cssW / state.cssH;
   const narrow = innerWidth < 900;
 
@@ -345,8 +334,8 @@ function frame(now) {
   perspective(state.proj, fov, aspect, 0.1, 80);
 
   const visW = 2 * dist * Math.tan(fov / 2) * aspect;
-  const shiftX = narrow ? 0 : mix(PLACE[tl.from].x, PLACE[tl.to].x, e);
-  const shiftY = mix(anchorY(tl.from, narrow), anchorY(tl.to, narrow), e);
+  const shiftX = narrow ? 0 : mix(pa.x, pb.x, e);
+  const shiftY = mix(anchorY(tl.a, narrow), anchorY(tl.b, narrow), e);
   const trioSpread = narrow ? clamp(visW * 0.3, 1.1, 3.6) : clamp(visW * 0.31, 1.6, 3.8);
   const trioScale = clamp(visW / 9.5, 0.45, 1);
 
@@ -359,7 +348,7 @@ function frame(now) {
 
   const inHero = sm < state.heroH * 0.75;
   const split = inHero && state.scene.front ? dist : 0;
-  const opacity = narrow ? mix(PLACE[tl.from].narrow, PLACE[tl.to].narrow, e) : 0.9;
+  const opacity = narrow ? mix(pa.narrow, pb.narrow, e) : 0.9;
   const r = els.projets.getBoundingClientRect();
   const bandAmp = Math.min(150, state.cssH * 0.16, state.cssW * 0.11);
   const bandLead = Math.min(state.cssH * 0.06, state.cssW * 0.045);
@@ -367,15 +356,15 @@ function frame(now) {
   state.scene.render({
     u_time: time,
     u_intro: intro,
-    u_from: { int: [tl.from] },
-    u_to: { int: [tl.to] },
+    u_from: { int: [from] },
+    u_to: { int: [to] },
     u_t: t,
     u_sub: sub,
     u_proj: state.proj,
     u_view: state.view,
     u_shift: [shiftX, shiftY],
     u_size: (narrow ? 1.9 : 2.1) * state.dpr,
-    u_drift: reduce ? 0 : mix(PLACE[tl.from].drift, PLACE[tl.to].drift, e),
+    u_drift: reduce ? 0 : mix(pa.drift, pb.drift, e),
     u_arc: reduce ? 0 : 1,
     u_fit: [aspect, trioSpread, trioScale, visW * 1.1],
     u_ink: COLORS.ink,

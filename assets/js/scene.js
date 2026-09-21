@@ -99,21 +99,36 @@ Fm fSources(float id, vec4 s, float T) {
     p = rotX(p, 0.5 + 0.25 * shell);
     at = vec3(-3.35, 0.7, -0.6);
   } else if (c < 1.5) {
-    // exports métier, feuille de tableur aux cellules inégales
-    float cols = 13.0;
-    float rows = 17.0;
-    float cell = floor(s.y * cols * rows);
-    float ix = mod(cell, cols);
-    float iy = floor(cell / cols);
-    float fill = 0.2 + 0.72 * hash11(cell * 1.73 + 4.0);
-    float cw = 2.8 / cols;
-    p = vec3((ix + s.z * fill) * cw - 1.4, (iy / (rows - 1.0) - 0.5) * 2.1, 0.0);
-    p.y += (s.w - 0.5) * 0.014;
-    p.z += 0.06 * sin(ix * 0.8 + T * 0.7);
+    // exports métier, tableau quadrillé aux cellules plus ou moins remplies
+    float cols = 7.0;
+    float rows = 11.0;
+    vec2 size = vec2(2.6, 2.1);
+    float u = fract(s.y * 2.0);
+    if (s.y < 0.45) {
+      // filets du tableau
+      if (s.w < 0.5) {
+        float r = floor(u * (rows + 1.0));
+        p = vec3((s.z - 0.5) * size.x, (r / rows - 0.5) * size.y, 0.0);
+      } else {
+        float k2 = floor(u * (cols + 1.0));
+        p = vec3((k2 / cols - 0.5) * size.x, (s.z - 0.5) * size.y, 0.0);
+      }
+    } else {
+      // contenu des cellules, un trait par cellule
+      float cell = floor(u * cols * rows);
+      float ix = mod(cell, cols);
+      float iy = floor(cell / cols);
+      float fill = 0.15 + 0.6 * hash11(cell * 1.73 + 4.0);
+      vec2 cs = size / vec2(cols, rows);
+      p = vec3((ix + 0.14 + s.z * fill) * cs.x - size.x * 0.5, (iy + 0.5) * cs.y - size.y * 0.5, 0.0);
+      p.y += (s.w - 0.5) * 0.016;
+    }
+    p.z += 0.05 * sin(p.x * 2.0 + T * 0.7);
     p = rotY(p, -0.66 + 0.06 * sin(T * 0.21));
     p = rotX(p, -0.24);
     p = rotZ(p, 0.08);
-    at = vec3(3.05, -0.55, 1.25);
+    // en format portrait, le tableau descend sous le titre du poste
+    at = vec3(3.05, -0.55 - (1.0 - k) * 1.25, 1.25);
   } else {
     // fichiers plats, lignes de longueurs variables
     float lines = 22.0;
