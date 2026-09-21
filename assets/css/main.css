@@ -476,6 +476,13 @@ main { overflow-x: clip; }
   font-weight: 500;
   letter-spacing: -0.012em;
 }
+.pub__orig {
+  margin: 12px 0 0;
+  max-width: 58ch;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
 .pub__meta {
   margin: 0;
   font-family: var(--mono);
@@ -483,6 +490,7 @@ main { overflow-x: clip; }
   line-height: 1.55;
   color: var(--ink-2);
 }
+.pub__side .link { margin-top: 16px; }
 
 /* Compétences */
 .skills { padding: 22vh var(--gutter) 26vh; }
