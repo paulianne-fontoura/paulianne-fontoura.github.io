@@ -299,7 +299,7 @@ main { overflow-x: clip; }
 /* Titres de section */
 .sec-title {
   margin: 0 0 clamp(40px, 9vh, 104px);
-  font-size: min(7vw, 8rem);
+  font-size: clamp(1.75rem, 5.8vw, 6.6rem);
   font-weight: 800;
   font-stretch: 125%;
   text-transform: uppercase;
@@ -384,7 +384,7 @@ main { overflow-x: clip; }
 .project__num {
   font-weight: 800;
   font-stretch: 125%;
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(2.6rem, 4.6vw, 4.4rem);
   line-height: 0.78;
   letter-spacing: -0.04em;
   color: transparent;
