@@ -119,24 +119,48 @@
       <article class="project reveal">
         <div class="project__head">
           <span class="project__num">01</span>
-          <span class="tag">En cours</span>
         </div>
-        <h3 class="project__title">Audit continu du registre des décès de l'Insee</h3>
-        <p class="stack">Python <span class="sep">·</span> DuckDB <span class="sep">·</span> pytest <span class="sep">·</span> GitHub Actions</p>
-        <p class="project__text">Le fichier des personnes décédées de l'Insee compte 29&nbsp;millions de lignes et change chaque mois&nbsp;- fichiers republiés, corrections silencieuses, doublons. Le pipeline télécharge, contrôle et charge chaque publication dans un entrepôt idempotent qui conserve tous les états du registre, sous tests automatisés et intégration continue. Les corrections du fichier deviennent mesurables au lieu de rester invisibles.</p>
+        <h3 class="project__title">Combien de temps pour compter les morts&nbsp;? Audit continu du registre des décès de l'Insee</h3>
+        <p class="stack">Python <span class="sep">·</span> DuckDB <span class="sep">·</span> dbt <span class="sep">·</span> GitHub Actions <span class="sep">·</span> BigQuery <span class="sep">·</span> Power BI</p>
+        <p class="project__text">Le fichier public des personnes décédées compte 30&nbsp;millions de lignes depuis 1970. Chaque mois, le pipeline en capture une photo, la reconstruit sur deux axes de temps, mesure complétude, délais et doublons, puis la rapproche des séries officielles de l'Insee et des comptes du CépiDc. 99,2&nbsp;% des décès arrivent au registre public en moins de 90&nbsp;jours, 60,2&nbsp;% en moins de 30, sur les 1&nbsp;162&nbsp;871 décès d'octobre 2024 à juin 2026. L'exécution est mensuelle et sans intervention, une alerte s'ouvre quand elle échoue.</p>
       </article>
 
       <article class="project reveal">
         <div class="project__head">
           <span class="project__num">02</span>
         </div>
-        <h3 class="project__title">Mortalité territoriale à structure d'âge comparable</h3>
+        <h3 class="project__title">Où le Brésil devrait-il ouvrir ses prochaines réanimations néonatales&nbsp;?</h3>
+        <p class="stack">Python <span class="sep">·</span> DuckDB <span class="sep">·</span> networkx <span class="sep">·</span> SciPy <span class="sep">·</span> LaTeX <span class="sep">·</span> GitHub Actions</p>
+        <p class="project__text">Vingt ans de naissances, de 2006 à 2025, croisés avec les temps de trajet en bus et en bateau sur le réseau de l'IBGE, et un modèle de localisation résolu de façon exacte. La part des naissances de 500 à 1&nbsp;499&nbsp;g vivant à plus de deux heures d'une réanimation néonatale publique est passée de 14,0&nbsp;% à 9,3&nbsp;%, presque entièrement avant 2010, et le Nord reste près de 30&nbsp;%. Dix nouvelles unités atteindraient 20&nbsp;% des naissances non couvertes. La note technique est en PDF, et chaque chiffre y est écrit par le code.</p>
+        <div class="project__links">
+          <a class="link" href="https://github.com/paulianne-fontoura/nicu-access-brazil" target="_blank" rel="noopener">
+            <span>Dépôt GitHub</span>
+            <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <a class="link" href="https://github.com/paulianne-fontoura/nicu-access-brazil/blob/main/report/note.pdf" target="_blank" rel="noopener">
+            <span>Note PDF</span>
+            <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project__head">
+          <span class="project__num">03</span>
+        </div>
+        <h3 class="project__title">Inégalités territoriales de mortalité en France</h3>
         <p class="stack">Python <span class="sep">·</span> R <span class="sep">·</span> LaTeX <span class="sep">·</span> GitHub Actions</p>
-        <p class="project__text">Mesure des écarts de mortalité entre départements français à partir des données ouvertes du CépiDc-Inserm et de l'Insee, avec standardisation directe des taux sur l'âge. Une fois la structure d'âge neutralisée, le rapport entre départements extrêmes est de 2,2 et le classement change du tout au tout. ETL Python, analyse R contrôlée face aux taux publiés, note technique en PDF.</p>
-        <a class="link" href="https://github.com/paulianne-fontoura/mortalite-territoriale-cepidc" target="_blank" rel="noopener">
-          <span>Dépôt GitHub</span>
-          <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-        </a>
+        <p class="project__text">Taux de mortalité standardisés sur l'âge pour les 101 départements, à partir des données ouvertes du CépiDc-Inserm et de l'Insee, avec leurs intervalles de confiance. L'écart de chaque département à la France est décomposé entre 18 chapitres de causes de décès. Le taux standardisé va de 645 pour 100&nbsp;000 à Paris à 1&nbsp;415 à Mayotte en 2023, soit un rapport de 2,2 entre les extrêmes.</p>
+        <div class="project__links">
+          <a class="link" href="https://github.com/paulianne-fontoura/mortalite-territoriale-cepidc" target="_blank" rel="noopener">
+            <span>Dépôt GitHub</span>
+            <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <a class="link" href="https://github.com/paulianne-fontoura/mortalite-territoriale-cepidc/blob/main/report/note.pdf" target="_blank" rel="noopener">
+            <span>Note PDF</span>
+            <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
       </article>
     </section>
 
