@@ -1,237 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paulianne Fontoura - Data Analyst | Analytics Engineer</title>
+  <meta name="description" content="Je transforme des sources hétérogènes - API publiques, exports métier, fichiers plats - en données testées, documentées et réconciliées, prêtes pour l'analyse et la décision.">
+  <meta name="author" content="Paulianne Fontoura">
+  <meta name="theme-color" content="#eeede8">
+  <link rel="canonical" href="https://paulianne-fontoura.github.io/">
 
-  <!-- Put your site title here -->
-  <title>
-    Paulianne Fontoura | Data and Business Analyst.
-  </title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://paulianne-fontoura.github.io/">
+  <meta property="og:title" content="Paulianne Fontoura - Data Analyst | Analytics Engineer">
+  <meta property="og:description" content="Je transforme des sources hétérogènes - API publiques, exports métier, fichiers plats - en données testées, documentées et réconciliées, prêtes pour l'analyse et la décision.">
+  <meta property="og:image" content="https://paulianne-fontoura.github.io/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Paulianne Fontoura - Data Analyst | Analytics Engineer">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <meta name="description" content="Data analyst driving business impact through data-driven strategies. Expertise in SQL, Python, Power BI, Tableau and Looker, with skills in EDA, statistical modeling, A/B testing and reporting automation.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Paulianne Fontoura, Data Analyst, Business Intelligence, Analytics Engineer, Modern Data Stack, Statistic, DataViz" />
-  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="module" src="assets/js/main.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Paulianne Fontoura",
+    "jobTitle": "Data Analyst | Analytics Engineer",
+    "url": "https://paulianne-fontoura.github.io/",
+    "email": "mailto:pauliannefontoura.contact@gmail.com",
+    "sameAs": [
+      "https://github.com/paulianne-fontoura",
+      "https://www.linkedin.com/in/pauliannefontoura/"
+    ]
+  }
+  </script>
 </head>
-
 <body>
+  <canvas class="scene scene--back" id="scene-back" aria-hidden="true"></canvas>
+  <canvas class="scene scene--front" id="scene-front" aria-hidden="true"></canvas>
 
-  <!-- ***** Header ***** -->
-
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#tools" class="nav__link">Tools</a></li>
-          <li class="nav__item">
-            <a href="#work" class="nav__link">Work</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-        
-          <span>Paulianne Fontoura</span>
-        </h1>
-        
-          <p> 
-          <div class="heading-secondary"> Building foundations for actionable insights.</div>
-          </p>
-        <a href="#contact" class="btn btn--pink">Contact me</a>
-      </div>
-      </div>
-    </div>
+  <header class="hd">
+    <a class="hd__name" href="#haut">Paulianne Fontoura</a>
+    <nav class="hd__nav" aria-label="Sections">
+      <a href="#a-propos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main role="main">
-   <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Description -->
-            <p>
-              Analyste de données axée sur la génération d'impact business par des stratégies data-driven.
-            </p>
-            <p>
-              Mon approche combine l'analyse diagnostique et le soutien à la prise de décision afin d'aider les organisations à réduire les frictions opérationnelles, améliorer leur efficacité, renforcer la performance centrée sur le client, accroître l'engagement, gagner des parts de marché et optimiser les KPIs.
-            </p>
-            <p>
-              Maîtrise de SQL, Excel, Python, Power BI, Tableau et Looker, avec une expertise en analyse exploratoire des données (EDA), modélisation statistique, tests A/B et automatisation des rapports dans des workflows évolutifs et interfonctionnels.
-            </p>
-            <!-- LinkedIn profile -->
-            <a href="https://www.linkedin.com/in/pauliannefontoura/" target="_blank" rel="noopener" class="btn">My LinkedIn</a>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/professionalphoto.png" alt="" />
-          </div>
+  <main>
+    <section class="hero" id="haut">
+      <div class="hero__main">
+        <h1 class="hero__title">
+          <span class="hero__line"><span class="hero__word">Paulianne</span></span>
+          <span class="hero__line"><span class="hero__word">Fontoura</span></span>
+        </h1>
+        <p class="hero__role"><span class="nw">Data Analyst <span class="pipe">|</span></span> <span class="nw">Analytics Engineer</span></p>
+      </div>
+      <div class="hero__meta tick">
+        <p class="hero__stack">SQL <span class="sep">·</span> Python <span class="sep">·</span> dbt <span class="sep">·</span> Power BI <span class="sep">·</span> BigQuery</p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="mailto:pauliannefontoura.contact@gmail.com">M'écrire</a>
+          <a class="btn" href="https://github.com/paulianne-fontoura" target="_blank" rel="noopener me">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/pauliannefontoura/" target="_blank" rel="noopener me">LinkedIn</a>
         </div>
       </div>
+    </section>
+
+    <section class="about" id="a-propos">
+      <div class="about__pin">
+        <h2 class="sec-title" data-scramble>À propos</h2>
+        <div class="about__body">
+          <div class="about__track" aria-hidden="true"><span></span></div>
+          <p class="about__p">Je transforme des sources hétérogènes&nbsp;- API publiques, exports métier, fichiers plats&nbsp;- en données testées, documentées et réconciliées, prêtes pour l'analyse et la décision.</p>
+          <p class="about__p">Mon travail couvre la chaîne complète. Ingestion en Python, modélisation en SQL, entrepôt DuckDB ou BigQuery, restitution en Power BI. Chaque dépôt est versionné, testé et vérifié en intégration continue.</p>
+          <p class="about__p">Les chiffres livrés se vérifient. Contrôles de cohérence, réconciliation contre les sources officielles, écarts documentés.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="competences">
+      <h2 class="sec-title" data-scramble>Compétences</h2>
+      <div class="skills__stage" aria-hidden="true"></div>
+      <div class="skills__grid">
+        <div class="skill reveal tick">
+          <h3 class="skill__title">Données</h3>
+          <ul class="skill__list">
+            <li>SQL</li><li>dbt</li><li>modélisation dimensionnelle</li><li>tests de données</li><li>réconciliation</li>
+          </ul>
+        </div>
+        <div class="skill reveal tick">
+          <h3 class="skill__title">Ingénierie</h3>
+          <ul class="skill__list">
+            <li>Python</li><li>Git</li><li>GitHub Actions</li><li>DuckDB</li><li>BigQuery</li>
+          </ul>
+        </div>
+        <div class="skill reveal tick">
+          <h3 class="skill__title">Restitution</h3>
+          <ul class="skill__list">
+            <li>Power BI</li><li>DAX</li><li>documentation technique</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects band" id="projets">
+      <h2 class="sec-title" data-scramble>Projets</h2>
+
+      <article class="project reveal">
+        <div class="project__head">
+          <span class="project__num">01</span>
+          <span class="tag">En cours</span>
+        </div>
+        <h3 class="project__title">Audit continu du registre des décès de l'Insee</h3>
+        <p class="stack">Python <span class="sep">·</span> DuckDB <span class="sep">·</span> pytest <span class="sep">·</span> GitHub Actions</p>
+        <p class="project__text">Le fichier des personnes décédées de l'Insee compte 29&nbsp;millions de lignes et change chaque mois&nbsp;- fichiers republiés, corrections silencieuses, doublons. Le pipeline télécharge, contrôle et charge chaque publication dans un entrepôt idempotent qui conserve tous les états du registre, sous tests automatisés et intégration continue. Les corrections du fichier deviennent mesurables au lieu de rester invisibles.</p>
+      </article>
+
+      <article class="project reveal">
+        <div class="project__head">
+          <span class="project__num">02</span>
+        </div>
+        <h3 class="project__title">Mortalité territoriale à structure d'âge comparable</h3>
+        <p class="stack">Python <span class="sep">·</span> R <span class="sep">·</span> LaTeX <span class="sep">·</span> GitHub Actions</p>
+        <p class="project__text">Mesure des écarts de mortalité entre départements français à partir des données ouvertes du CépiDc-Inserm et de l'Insee, avec standardisation directe des taux sur l'âge. Une fois la structure d'âge neutralisée, le rapport entre départements extrêmes est de 2,2 et le classement change du tout au tout. ETL Python, analyse R contrôlée face aux taux publiés, note technique en PDF.</p>
+        <a class="link" href="https://github.com/paulianne-fontoura/mortalite-territoriale-cepidc" target="_blank" rel="noopener">
+          <span>Dépôt GitHub</span>
+          <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </article>
+    </section>
+
+    <section class="pubs" id="publications">
+      <h2 class="sec-title" data-scramble>Publications</h2>
+      <ul class="pubs__list tick">
+        <li class="pub reveal">
+          <div class="pub__head">
+            <h3 class="pub__title">Système d'aide à la décision en obstétrique aligné sur les recommandations de l'OMS</h3>
+            <p class="pub__orig" lang="en">Obstetric decision-support system - An informational model for maternal autonomy towards the Agenda 2030 health goals</p>
+          </div>
+          <div class="pub__side">
+            <p class="pub__meta">première autrice, chapitre d'ouvrage, Advanced Notes in Information Science, vol.&nbsp;8, <span class="nw">p.&nbsp;40-72</span>, 2025</p>
+            <a class="link" href="https://anis.pro-metrics.org/index.php/a/article/view/53" target="_blank" rel="noopener">
+              <span>Lire le chapitre</span>
+              <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+          </div>
+        </li>
+        <li class="pub reveal">
+          <div class="pub__head">
+            <h3 class="pub__title">Planification de la capacité en lits de réanimation</h3>
+          </div>
+          <div class="pub__side">
+            <p class="pub__meta">co-autrice, Health Environments Research &amp; Design Journal, 2026</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="sec-title" data-scramble>Contact</h2>
+      <p class="contact__text reveal">Pour un poste, une mission ou une question technique, le moyen le plus direct est l'e-mail.</p>
+      <a class="contact__mail reveal" href="mailto:pauliannefontoura.contact@gmail.com">
+        <span>pauliannefontoura.contact@gmail.com</span>
+        <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+      </a>
     </section>
   </main>
 
-    <!-- ***** Tools ***** -->
-
-    <section class="tools" id="tools">
-      <div class="row">
-        <h2>Tools</h2>
-        <div class="tools__logos">
-          <!-- Add logos of the tools and languages -->
-          <img src="./images/python.png" class="tools__logo" alt="Python" />
-          <img src="./images/sql.png" class="tools__logo" alt="SQL" />
-          <img src="./images/powerbi.png" class="tools__logo" alt="Power BI" />
-          <img src="./images/excel.png" class="tools__logo" alt="Excel" />
-          <img src="./images/tableau.png" class="tools__logo" alt="tableau" />
-          <img src="./images/restapi.png" class="tools__logo" alt="Rest API" />
-          <img src="./images/r.png" class="tools__logo" alt="R language" />
-          <img src="./images/figma.png" class="tools__logo" alt="Figma" />
-        </div>
-      </div>
-    </section>
-
-    
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-          <div id="slider">
-            <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
-            <input type="radio" name="slider" id="slide4">
-            <input type="radio" name="slider" id="slide5">
-            <input type="radio" name="slider" id="slide6">
-            <div id="slides">
-               <div id="overflow">
-                  <div class="inner">
-                    <div class="slide slide_1">
-                      <div class="slide-content">
-                         <a href="https://github.com/paulianne-fontoura/NPS" target="_blank"><img src="/images/icon1.png"  width="15%" height="15%" alt="Monograph - Obstetric Information Base"></a>
-                         <p><div class="heading-secondary">Patterns based on the NPS metric in the coating industry</div></h3></p>
-                      </div>
-                     </div>
-                     <div class="slide slide_2">
-                      <div class="slide-content">
-                         <a href="testing-hypotheses/Testing hypotheses to analyze the Brazilian obstetric scenario - presentation.pdf" target="_blank"><img src="/images/icon2.png" width="15%" height="15%" alt="Monograph - Obstetric Information Base"></a>
-                         <p><div class="heading-secondary">Testing hypotheses to analyze the Brazilian obstetric scenario</div></h3></p>
-                      </div>
-                    </div>
-                    <div class="slide slide_3">
-                      <div class="slide-content">
-                         <a href="https://github.com/paulianne-fontoura/churn-analysis" target="_blank"><img src="/images/icon3.png"  width="15%" height="15%" alt="Monograph - Obstetric Information Base"></a>
-                         <p><div class="heading-secondary">Churn analysis in a telecommunications system</div></h3></p>
-                      </div>
-                     </div>
-                     <div class="slide slide_4">
-                      <div class="slide-content">
-                         <a href="https://github.com/paulianne-fontoura/IPEA-DATA" target="_blank"><img src="/images/icon4.png"  width="15%" height=15%" alt="Monograph - Obstetric Information Base"></a>
-                         <p><div class="heading-secondary">API query publishes IPEA DATA for calculation of accumulated IPCA index</div></h3></p>
-                      </div>
-                     </div>
-                     <div class="slide slide_5">
-                      <div class="slide-content">
-                         <a href="https://github.com/paulianne-fontoura/IDH-GDP" target="_blank"><img src="/images/icon5.png"  width="15%" height="15%" alt="Monograph - Obstetric Information Base"></a>
-                         <p><div class="heading-secondary">Correlation IDH-GDP France</div></h3></p>
-                      </div>
-                   </div>
-                   <div class="slide slide_6">
-                    <div class="slide-content">
-                       <a href="Monograph/Monograph - Obstetric Information Base - FONTOURA Paulianne.pdf" target="_blank"><img src="/images/icon6.png"  width="15%" height="15%"alt="Monograph - Obstetric Information Base"></a>
-                       <p><div class="heading-secondary">Monograph - Obstetric Information Base</div></h3></p>
-                    </div>
-                 </div>
-                  </div>
-               </div>
-            </div>
-            <div id="controls">
-               <label for="slide1"></label>
-               <label for="slide2"></label>
-               <label for="slide3"></label>
-               <label for="slide4"></label>
-               <label for="slide5"></label>
-               <label for="slide6"></label>
-            </div>
-            <div id="bullets">
-               <label for="slide1"></label>
-               <label for="slide2"></label>
-               <label for="slide3"></label>
-               <label for="slide4"></label>
-               <label for="slide5"></label>
-               <label for="slide6"></label>
-            </div>
-         </div>
-          
-        
-        </div>
-      </div>
-    </section>
-
- 
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Contact me</h2>
-      <div class="contact__info">
-        <p>
-         If you’re looking to explore data-driven solutions, optimize analytical processes, or discuss how automation can elevate performance, I’m here to help. 
-          Whether you have a question, need professional insight, or want to exchange ideas on data analysis, process optimization, or strategic dashboards, feel free to reach out.
-        <p>
-          I value meaningful connections that foster innovation and technical excellence. The best way to contact me is via email—I’ll make sure to respond promptly.
-        <p>
-        </p>
-        </p>
-        <p>
-        </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:pauliannefontoura.contact@gmail.com" class="btn">pauliannefontoura.contact@gmail.com</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ***** Footer ***** -->
-
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/pauliannefontoura>
-            <img src="./images/linkedin.svg" title="Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-      
-        <li class="footer__social-link-item">
-          <a href="https://github.com/paulianne-fontoura/" title="Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-      </ul>
-    </div>
+  <footer class="ft tick">
+    <p>© 2026 Paulianne Fontoura</p>
   </footer>
-
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
-  <script src="./index.js"></script>
 </body>
-
 </html>
